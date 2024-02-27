@@ -1,17 +1,22 @@
 <script setup></script>
 
 <template>
-  <header class="container border border-success border-5 bg-red text-white">
-    <div class="text-center border border-white row">
-      <div class="col d-block border border-white">tel</div>
-      <div class="col d-none d-sm-block border border-white">e-mail</div>
-      <div class="col d-none d-sm-block border border-white">teklif</div>
+  <header class="w-100 border bg-red" style="position: absolute; z-index: 2">
+    <div class="text-center d-flex ms-auto justify-content-around py-1 w-50">
+      <div class="d-block">tel</div>
+      <div class="d-none d-sm-block">e-mail</div>
+      <div class="d-none d-sm-block">teklif</div>
     </div>
-    <nav class="bg-red text-white navbar navbar-expand-lg border border-white">
-      <div class="container-fluid ">
-        <router-link class="navbar-brand text-white" to="/">ARMA</router-link>
+    <nav class="text-white navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <router-link
+          class="navbar-brand text-white border opacity-100 bg-danger w-25"
+          style="letter-spacing: 6px; font-size: 36px"
+          to="/"
+          >ARMA</router-link
+        >
         <button
-          class="navbar-toggler "
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -19,19 +24,24 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon" style="color: white !important;"></span>
+          <i class="bi bi-list text-white" style="font-size: 28px"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <div
+          class="collapse navbar-collapse border"
+          id="navbarSupportedContent"
+        >
+          <ul
+            class="navbar-nav border w-75 bg-white ps-4 p-3 ms-auto mb-2 mb-lg-0"
+          >
             <li class="nav-item">
-              <RouterLink class="nav-link active " aria-current="page" to="/"
+              <RouterLink class="nav-link active" aria-current="page" to="/"
                 >Anasayfa</RouterLink
               >
               <!-- <a class="nav-link active" aria-current="page" to="/">Ev</a> -->
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" aria-current="page" to="/about"
-                >Hakkında</RouterLink
+              <RouterLink class="nav-link" aria-current="page" to="/kurumsal"
+                >Kurumsal</RouterLink
               >
             </li>
             <li class="nav-item dropdown">
@@ -42,10 +52,14 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Genleşme Tankları
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <RouterLink class="dropdown-item" to="/urunlerimiz"
+                    >Ürünlerimiz</RouterLink
+                  >
+                </li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -53,7 +67,6 @@
                 </li>
               </ul>
             </li>
-            
           </ul>
         </div>
       </div>
@@ -63,10 +76,12 @@
 
 <style scoped>
 .bg-red {
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  border: 1px solid black;
 }
 
-a[class^="nav-link"]{
-  color:white !important
-}
+/* a[class^="nav-link"] {
+  color: white !important;
+} */
 </style>

@@ -1,5 +1,5 @@
 <template>
   <div>
-    about
+    this is kurumsal
   </div>
 </template>
